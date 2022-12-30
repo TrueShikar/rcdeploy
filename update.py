@@ -65,4 +65,4 @@ else:
     log_info(f'Entered Upstream Repo: {UPSTREAM_REPO}')
     log_info(f'Entered Upstream Branch: {UPSTREAM_BRANCH}')
 
-Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:{SERVER_PORT}", shell=True)
+Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:10000", shell=True)
