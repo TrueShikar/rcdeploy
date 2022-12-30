@@ -1,3 +1,4 @@
+from keep_alive import keep_alive
 from logging import FileHandler, StreamHandler, INFO, basicConfig, error as log_error, info as log_info
 from os import path as ospath, environ, execl as osexecl
 from subprocess import run as srun
@@ -65,4 +66,4 @@ else:
     log_info(f'Entered Upstream Repo: {UPSTREAM_REPO}')
     log_info(f'Entered Upstream Branch: {UPSTREAM_BRANCH}')
 
-Popen(f"gunicorn web.wserver:app --bind 0.0.0.0:10000", shell=True)
+keep_alive()
